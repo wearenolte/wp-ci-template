@@ -24,4 +24,15 @@ git clean -fdX web
 composer -n lint
 
 # Check coding standards
-composer -n code-sniff
+# composer -n code-sniff
+
+# Check Theme coding standards
+FILE=./web/wp-content/themes/lean-theme/composer.json
+if [[ -f "$FILE" ]]
+then
+    # Run Lean Theme linter
+    cd web/wp-content/themes/lean-theme && composer -n lint
+else
+    # Run default linter
+    composer -n theme-code-sniff
+fi

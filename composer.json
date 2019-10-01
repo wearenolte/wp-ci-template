@@ -89,7 +89,10 @@
       "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "code-sniff": [
-      "./vendor/bin/phpcs --standard=WordPress ./web/wp-content"
+      "./vendor/bin/phpcs --standard=WordPress --ignore=./web/wp-content/themes ./web/wp-content"
+    ],
+    "theme-code-sniff": [
+      "./vendor/bin/phpcs --standard=WordPress ./web/wp-content/themes"
     ],
     "unit-test": [
       "./vendor/bin/phpunit tests/unit/*"
