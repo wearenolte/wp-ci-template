@@ -11,6 +11,10 @@
     {
       "type": "vcs",
       "url": "https://github.com/pantheon-systems/wordpress-composer"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/wearenolte/lean-theme.git"
     }
   ],
   "require": {
@@ -24,7 +28,8 @@
     "wpackagist-plugin/lh-hsts": "^1.24",
     "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
     "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
-    "wpackagist-theme/twentynineteen": "^1.2"
+    "wpackagist-theme/twentynineteen": "^1.2",
+    "wearenolte/lean-theme": "1.0"
   },
   "require-dev": {
     "behat/mink-goutte-driver": "^1.2.1",
@@ -89,9 +94,6 @@
       "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "code-sniff": [
-      "./vendor/bin/phpcs --standard=WordPress --ignore=./web/wp-content/themes ./web/wp-content"
-    ],
-    "theme-code-sniff": [
       "./vendor/bin/phpcs --standard=WordPress ./web/wp-content/themes"
     ],
     "unit-test": [

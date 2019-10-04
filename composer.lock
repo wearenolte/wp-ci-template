@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eee9bea1ef09bf90b62fa55f06b30db6",
+    "content-hash": "a49d01a48801a79711eb167353d82fc4",
     "packages": [
         {
             "name": "composer/installers",
@@ -175,6 +175,327 @@
                 "wordpress"
             ],
             "time": "2015-06-11T15:15:30+00:00"
+        },
+        {
+            "name": "moxie-lean/assets",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/assets.git",
+                "reference": "2082a8085a4d3731c530aed0f2fa183e4aa4b6e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/assets/zipball/2082a8085a4d3731c530aed0f2fa183e4aa4b6e8",
+                "reference": "2082a8085a4d3731c530aed0f2fa183e4aa4b6e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Crisoforo Gaspar Hernandez",
+                    "email": "github@crisoforo.com"
+                }
+            ],
+            "description": "Loader for theme assets and some extra utilities related with loader of the assets.",
+            "homepage": "https://github.com/moxie-lean/assets",
+            "keywords": [
+                "assets",
+                "css",
+                "scripts",
+                "wordpress"
+            ],
+            "time": "2018-07-23T20:56:40+00:00"
+        },
+        {
+            "name": "moxie-lean/loader",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/leanlegacy/loader.git",
+                "reference": "3ada92d475cc1e10d07e4be443a6d37a56b78aae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/leanlegacy/loader/get/3ada92d475cc1e10d07e4be443a6d37a56b78aae.zip",
+                "reference": "3ada92d475cc1e10d07e4be443a6d37a56b78aae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "src/"
+                },
+                "files": [
+                    "./src/config.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Crisoforo Gaspar",
+                    "email": "github@crisoforo.com"
+                }
+            ],
+            "description": "Loader for files in wordpress making things easier instead of using a require",
+            "homepage": "https://bitbucket.org/leanlegacy/loader",
+            "time": "2017-07-24T15:05:44+00:00"
+        },
+        {
+            "name": "moxie-lean/wp-acf",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/leanlegacy/wp-acf.git",
+                "reference": "2f5093438d637fa0eca42ad6d10f6b433ec078b2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/leanlegacy/wp-acf/get/2f5093438d637fa0eca42ad6d10f6b433ec078b2.zip",
+                "reference": "2f5093438d637fa0eca42ad6d10f6b433ec078b2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Fenton",
+                    "email": "devs@getmoxied.net"
+                },
+                {
+                    "name": "Crisoforo Gaspar",
+                    "email": "devs@getmoxied.net"
+                }
+            ],
+            "description": "Helper functions for working with Advanced Custom Fields",
+            "homepage": "https://github.com/moxie-lean/wp-acf",
+            "keywords": [
+                "acf",
+                "wordpress"
+            ],
+            "time": "2017-01-20T17:32:04+00:00"
+        },
+        {
+            "name": "moxie-lean/wp-taxonomy",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/wp-taxonomy.git",
+                "reference": "1ce10640e64d4c1e560e3ff7dae26806b6e37d61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/wp-taxonomy/zipball/1ce10640e64d4c1e560e3ff7dae26806b6e37d61",
+                "reference": "1ce10640e64d4c1e560e3ff7dae26806b6e37d61",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "3.*",
+                "wp-coding-standards/wpcs": "0.14.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moxie Developers",
+                    "email": "developer@getmoxied.net"
+                }
+            ],
+            "description": "wp-taxonomy",
+            "homepage": "https://github.com/wearenolte/wp-taxonomy",
+            "keywords": [
+                "taxonomies",
+                "wordpress"
+            ],
+            "time": "2019-05-15T17:15:13+00:00"
+        },
+        {
+            "name": "moxie-lean/wp-widgets",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/leanlegacy/wp-widgets.git",
+                "reference": "701227bb750a62344ee7d503b8cdbb2f6212640a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/leanlegacy/wp-widgets/get/701227bb750a62344ee7d503b8cdbb2f6212640a.zip",
+                "reference": "701227bb750a62344ee7d503b8cdbb2f6212640a",
+                "shasum": ""
+            },
+            "require": {
+                "moxie-lean/wp-acf": "1.*.*",
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\Widgets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Fenton",
+                    "email": "devs@getmoxied.net"
+                }
+            ],
+            "description": "Control the WP widgets whilst using WP in as a headless CMS.",
+            "homepage": "https://github.com/moxie-lean/wp-widgets",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-05-27T14:33:36+00:00"
+        },
+        {
+            "name": "nolte/lean-styleguide",
+            "version": "v1.0.25",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/lean-theme-styleguide.git",
+                "reference": "b596a8cd224f780537273995b54074d2072f483f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/lean-theme-styleguide/zipball/b596a8cd224f780537273995b54074d2072f483f",
+                "reference": "b596a8cd224f780537273995b54074d2072f483f",
+                "shasum": ""
+            },
+            "require": {
+                "moxie-lean/loader": "^1.3",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LeanStyleguide\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nolte",
+                    "email": "developer@wearenolte.com",
+                    "homepage": "https://wearenolte.com/"
+                },
+                {
+                    "name": "Francisco Giraldo",
+                    "email": "fcog111@gmail.com",
+                    "homepage": "http://franciscogiraldo.com/"
+                }
+            ],
+            "description": "A styleguide for the Lean Theme's UI components",
+            "homepage": "https://github.com/wearenolte/lean-theme-styleguide",
+            "time": "2019-10-03T22:38:26+00:00"
+        },
+        {
+            "name": "nolte/wp-endpoint",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/wp-endpoint.git",
+                "reference": "5863c096597af1d57b94a3bf39fe50547351c400"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/wp-endpoint/zipball/5863c096597af1d57b94a3bf39fe50547351c400",
+                "reference": "5863c096597af1d57b94a3bf39fe50547351c400",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Nolte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nolte",
+                    "email": "developer@wearenolte.com",
+                    "homepage": "https://wearenolte.com/"
+                },
+                {
+                    "name": "Crisoforo Gaspar Hernandez",
+                    "email": "hello@crisoforo.com",
+                    "homepage": "https://crisoforo.com/"
+                }
+            ],
+            "description": "wp-endpoint",
+            "homepage": "https://github.com/wearenolte/wp-endpoint",
+            "time": "2017-11-23T15:56:35+00:00"
         },
         {
             "name": "pantheon-systems/quicksilver-pushback",
@@ -494,6 +815,183 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
+        },
+        {
+            "name": "wearenolte/buster",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/Buster.git",
+                "reference": "56ff33a9c824482273ac86bc7dbe466847a3616b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/Buster/zipball/56ff33a9c824482273ac86bc7dbe466847a3616b",
+                "reference": "56ff33a9c824482273ac86bc7dbe466847a3616b",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/version"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "WeAreNolte",
+                    "email": "developer@wearenolte.com"
+                },
+                {
+                    "name": "Crisoforo Gaspar",
+                    "email": "hello@crisoforo.com"
+                }
+            ],
+            "description": "Creates a .deploy file to use as a buster mechanism",
+            "time": "2017-07-25T10:13:38+00:00"
+        },
+        {
+            "name": "wearenolte/lean-theme",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/lean-theme.git",
+                "reference": "fd117f5a6b7b108b7b16be4eb9ff216091c0fabe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/lean-theme/zipball/fd117f5a6b7b108b7b16be4eb9ff216091c0fabe",
+                "reference": "fd117f5a6b7b108b7b16be4eb9ff216091c0fabe",
+                "shasum": ""
+            },
+            "require": {
+                "moxie-lean/assets": "2.*",
+                "moxie-lean/loader": "^1.3",
+                "moxie-lean/wp-taxonomy": "1.0.5",
+                "moxie-lean/wp-widgets": "^1.0",
+                "nolte/lean-styleguide": "1.0.*",
+                "nolte/wp-endpoint": "3.0.*",
+                "wearenolte/buster": "^0.1.1",
+                "wearenolte/wp-cpt": "1.0.*"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "@stable",
+                "squizlabs/php_codesniffer": "3.4.*",
+                "wp-coding-standards/wpcs": "2.1.*"
+            },
+            "type": "wordpress-theme",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "backend/"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "@set-up-php-lint",
+                    "@build-deps"
+                ],
+                "post-update-cmd": [
+                    "@set-up-php-lint",
+                    "@build-deps"
+                ],
+                "build-deps": [
+                    "cd frontend && yarn",
+                    "cd backend/WP/Gutenberg/js && yarn --ignore-engines"
+                ],
+                "build-app": [
+                    "cd frontend && yarn build",
+                    "cd backend/WP/Gutenberg/js && yarn build"
+                ],
+                "build": [
+                    "@build-deps",
+                    "@build-app",
+                    "@update-version"
+                ],
+                "set-up-php-lint": [
+                    "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/",
+                    "phpcs --config-set default_standard ./phpcs.xml",
+                    "phpcs --config-set show_progress 1",
+                    "phpcs --config-set colors 1",
+                    "phpcs --config-set show_warnings 1",
+                    "phpcs --config-set ignore_warnings_on_exit 1"
+                ],
+                "update-version": [
+                    "version"
+                ],
+                "lint": [
+                    "@php-lint",
+                    "cd frontend && yarn lint"
+                ],
+                "php-lint": [
+                    "phpcs . --extensions=php",
+                    "phpmd . text phpmd.xml --suffixes php --exclude vendor,frontend/components/atoms/icons"
+                ],
+                "organism": [
+                    "cd frontend && bash createPattern.sh organisms "
+                ],
+                "molecule": [
+                    "cd frontend && bash createPattern.sh molecules "
+                ],
+                "atom": [
+                    "cd frontend && bash createPattern.sh atoms "
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Nolte",
+                    "email": "devs@wearenolte.com"
+                }
+            ],
+            "description": "Barebones modular WordPress theme",
+            "support": {
+                "source": "https://github.com/wearenolte/lean-theme/tree/master",
+                "issues": "https://github.com/wearenolte/lean-theme/issues"
+            },
+            "time": "2019-09-16T23:19:25+00:00"
+        },
+        {
+            "name": "wearenolte/wp-cpt",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wearenolte/wp-cpt.git",
+                "reference": "b950be34f64d34872cbf49b6a133fd978c1bdaf3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wearenolte/wp-cpt/zipball/b950be34f64d34872cbf49b6a133fd978c1bdaf3",
+                "reference": "b950be34f64d34872cbf49b6a133fd978c1bdaf3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "2.*",
+                "wp-coding-standards/wpcs": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Lean\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Crisoforo Gaspar Hernandez",
+                    "email": "github@crisoforo.com"
+                }
+            ],
+            "description": "Create custom post types easier.",
+            "homepage": "https://github.com/moxie-lean/wp-cpt",
+            "keywords": [
+                "cpt",
+                "post types",
+                "wordpress"
+            ],
+            "time": "2018-02-23T23:53:02+00:00"
         },
         {
             "name": "wpackagist-plugin/lh-hsts",
@@ -1450,16 +1948,16 @@
         },
         {
             "name": "genesis/behat-fail-aid",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/forceedge01/behat-fail-aid.git",
-                "reference": "0f994165f40354139e78abc7a2c09a0179240a41"
+                "reference": "31aa64ea25f1b69b2001442f590c0c618f3ec4d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/forceedge01/behat-fail-aid/zipball/0f994165f40354139e78abc7a2c09a0179240a41",
-                "reference": "0f994165f40354139e78abc7a2c09a0179240a41",
+                "url": "https://api.github.com/repos/forceedge01/behat-fail-aid/zipball/31aa64ea25f1b69b2001442f590c0c618f3ec4d4",
+                "reference": "31aa64ea25f1b69b2001442f590c0c618f3ec4d4",
                 "shasum": ""
             },
             "require": {
@@ -1499,7 +1997,7 @@
                 "error",
                 "fail"
             ],
-            "time": "2019-09-27T14:57:15+00:00"
+            "time": "2019-10-03T16:34:11+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -2349,22 +2847,22 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.8.1",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76"
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/f6811d96d97bdf400077a0cc100ae56aa32b9203",
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
                 "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
@@ -2408,7 +2906,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-06-13T12:50:23+00:00"
+            "time": "2019-10-03T11:07:50+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",

@@ -23,16 +23,15 @@ git clean -fdX web
 # Lint php code for syntax errors
 composer -n lint
 
-# Check coding standards
-# composer -n code-sniff
-
 # Check Theme coding standards
 FILE=./web/wp-content/themes/lean-theme/composer.json
 if [[ -f "$FILE" ]]
 then
     # Run Lean Theme linter
-    cd web/wp-content/themes/lean-theme && composer -n lint
+    cd web/wp-content/themes/lean-theme
+    composer install --no-ansi --no-interaction --optimize-autoloader --no-progress
+    composer -n lint
 else
     # Run default linter
-    composer -n theme-code-sniff
+    composer -n code-sniff
 fi
