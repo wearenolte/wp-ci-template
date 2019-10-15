@@ -1,0 +1,17 @@
+name: wp-ci-template
+recipe: wordpress
+config:
+  webroot: .
+  via: nginx
+  php: '7.3'
+  xdebug: true
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+services:
+  node:
+    type: node:10
