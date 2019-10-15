@@ -1,0 +1,6 @@
+services:
+  node:
+    type: node
+tooling:
+  yarn:
+    service: node

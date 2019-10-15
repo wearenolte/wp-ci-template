@@ -58,6 +58,9 @@
       "install-cms": [
         "wp core install --title={site-name} --url={site-url} --admin_user={account-name} --admin_email={account-mail} --admin_password={account-pass}",
         "wp option update permalink_structure '/%postname%/'"
+      ],
+      "install-theme": [
+        "wp theme activate lean-theme"
       ]
     },
     "installer-paths": {
