@@ -112,3 +112,8 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+
+# IDE generated files #
+#######################
+.idea/
