@@ -1,3 +1,5 @@
+name: wp-lando-app
+recipe: pantheon
 services:
   appserver:
     build_as_root:
