@@ -118,3 +118,8 @@ Thumbs.db
 # IDE generated files #
 #######################
 .idea/
+
+# Test framework generated files #
+##################################
+tests/cypress/videos
+tests/cypress/screenshots
