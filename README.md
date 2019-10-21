@@ -102,3 +102,25 @@ You should now be able to edit your site locally. You can stop Lando with `lando
 **Warning:** do NOT push/pull code between Lando and Pantheon directly. All code should be pushed to Bitbucket, which will deploy to Pantheon through its continuous integration service, Pipelines.
 
 Composer, Terminus and wp-cli commands should be run in Lando rather than on the host machine. This is done by prefixing the desired command with `lando`. For example, after a change to `composer.json` run `lando composer update` rather than `composer update`.
+
+## Testing Locally with Cypress
+
+Cypress is a JavaScript-based end-to-end testing framework. It is built on top of Mocha and Chai, frameworks that run on the browser, and supports Chai’s BDD and TDD assertion styles. Documentation for Cypress can be found [here](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell), with API docs [here](https://docs.cypress.io/api/api/table-of-contents.html). These include guides on [best practices](https://docs.cypress.io/guides/references/best-practices.html), commands, assertions, and events.
+
+Sample test suites included in `cypress/integration/` are intended only to demonstrate possible tests through simple common scenarios. You can find many more examples of tests, including tests with stubs, forms, and network requests, [in Cypress's Github](https://github.com/cypress-io/cypress-example-kitchensink/tree/master/cypress/integration/examples).
+
+### Writing Tests
+
+New tests can be added to `cypress/integration/`. [Fixture data](https://docs.cypress.io/api/commands/fixture.html) files can be added to `cypress/fixtures/`. The support file `cypress/support/index.js` runs before every spec file and is the place to store reusable behavior (such as navigating to the home page).
+
+To create a new spec file, use the syntax `test-name_test.spec.js`. Use the Mocha function `describe()` to group the tests in each file. Use `it()` to identify individual tests. Avoid the temptation to write an `it()` function for every assertion, as you might when unit testing. Integration tests can include multiple assertions and will run more efficiently this way.
+
+Cypress offers [viewport presets](https://docs.cypress.io/api/commands/viewport.html) for common devices.
+
+### Running Tests
+
+First run `export CYPRESS_HOST=your-local-env-url` to set the your local host as Cypress's base URL.
+
+To run tests headlessly, run the command `composer functional-test`. To run tests within the browser and view step-by-step snapshots, run `composer functional-test-open`. To run both Cypress and PHPunit tests, run `composer test`.
+
+An mp4 of the most recent run of each spec file is stored in `cypress/videos`.
