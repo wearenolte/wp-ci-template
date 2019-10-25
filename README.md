@@ -119,8 +119,6 @@ Cypress offers [viewport presets](https://docs.cypress.io/api/commands/viewport.
 
 ### Running Tests
 
-First run `export CYPRESS_HOST=your-local-env-url` to set the your local host as Cypress's base URL.
-
 To run tests headlessly, run the command `composer functional-test`. To run tests within the browser and view step-by-step snapshots, run `composer functional-test-open`. To run both Cypress and PHPunit tests, run `composer test`.
 
 An mp4 of the most recent run of each spec file is stored in `cypress/videos`.

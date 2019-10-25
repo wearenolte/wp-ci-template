@@ -103,10 +103,10 @@
       "./vendor/bin/phpunit tests/unit/*"
     ],
     "functional-test": [
-      "yarn run cypress run"
+      "./tests/cypress/run"
     ],
     "functional-test-open": [
-      "yarn run cypress open"
+      "./tests/cypress/open"
     ],
     "test": [
       "@unit-test",

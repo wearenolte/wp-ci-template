@@ -12,12 +12,11 @@ describe('Navigate within site', function() {
       .first().find('a')
       .first().as('firstNav') // Alias first nav link object as @firstNav
       .then( () => {
-      cy.get('@firstNav').click();
-    cy.get('@firstNav').closest('li').should('have.class', 'current_page_item')
-    cy.go('back');
-    cy.get('@firstNav').closest('li').should('not.have.class', 'current_page_item')
-  })
+        cy.get('@firstNav').click();
+        cy.get('@firstNav').closest('li').should('have.class', 'current_page_item')
+        cy.go('back');
+        cy.get('@firstNav').closest('li').should('not.have.class', 'current_page_item')
+      })
   });
-
 
 });

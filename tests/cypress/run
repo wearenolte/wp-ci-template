@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -eo pipefail
+ENV_FILE="../../.env"
+
+#
+# This script runs the Cypress tests.
+#
+
+# Export environment variables from .env file
+set -a; [ -f $ENV_FILE ] && . $ENV_FILE; set +a
+
+# Validate if LOCAL_BASE_URL env variable is set.
+if [[ -z $LOCAL_BASE_URL ]]; then
+  if [[ -s $ENV_FILE ]]; then
+    printf "\n" >> $ENV_FILE
+  fi
+  LOCAL_BASE_URL=$(lando info -p $[0].urls.$[1] | sed $'s,\x1b\\[[0-9;]*[a-zA-Z],,g')
+  printf "LOCAL_BASE_URL=${LOCAL_BASE_URL}" >> $ENV_FILE
+fi
+
+export CYPRESS_HOST=$LOCAL_BASE_URL
+yarn run cypress run

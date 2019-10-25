@@ -20,5 +20,5 @@ import './commands'
 // require('./commands')
 
 beforeEach(function() {
-  cy.visit(Cypress.config().baseUrl); // Hook that runs before all tests in the block
+  cy.visit(Cypress.env('HOST')); // Hook that runs before all tests in the block
 });
