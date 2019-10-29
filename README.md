@@ -107,7 +107,7 @@ Composer, Terminus and wp-cli commands should be run in Lando rather than on the
 
 Cypress is a JavaScript-based end-to-end testing framework. It is built on top of Mocha and Chai, frameworks that run on the browser, and supports Chai’s BDD and TDD assertion styles. Documentation for Cypress can be found [here](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell), with API docs [here](https://docs.cypress.io/api/api/table-of-contents.html). These include guides on [best practices](https://docs.cypress.io/guides/references/best-practices.html), commands, assertions, and events.
 
-Sample test suites included in `cypress/integration/` are intended only to demonstrate possible tests through simple common scenarios. You can find many more examples of tests, including tests with stubs, forms, and network requests, [in Cypress's Github](https://github.com/cypress-io/cypress-example-kitchensink/tree/master/cypress/integration/examples).
+You can find many examples of tests, including tests with stubs, forms, and network requests, [in Cypress's Github](https://github.com/cypress-io/cypress-example-kitchensink/tree/master/cypress/integration/examples).
 
 ### Writing Tests
 
@@ -115,7 +115,14 @@ New tests can be added to `cypress/integration/`. [Fixture data](https://docs.cy
 
 To create a new spec file, use the syntax `test-name_test.spec.js`. Use the Mocha function `describe()` to group the tests in each file. Use `it()` to identify individual tests. Avoid the temptation to write an `it()` function for every assertion, as you might when unit testing. Integration tests can include multiple assertions and will run more efficiently this way.
 
-Cypress offers [viewport presets](https://docs.cypress.io/api/commands/viewport.html) for common devices.
+To reference a component, instead of relying on class names or other brittle selectors, check if it already has a custom data attribute assigned to it, or assign one using the following pattern:
+`data-{type-of-component}="{component-slug}"`
+
+Example: `data-molecule="cards/media"`
+
+For creating the component slug, use the folder path. In this example, the component php file is in `molecules/cards/media.php`
+
+Note that for testing across screen sizes, Cypress offers [viewport presets](https://docs.cypress.io/api/commands/viewport.html) for common devices.
 
 ### Running Tests
 
