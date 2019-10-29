@@ -111,7 +111,7 @@ You can find many examples of tests, including tests with stubs, forms, and netw
 
 ### Writing Tests
 
-New tests can be added to `cypress/integration/`. [Fixture data](https://docs.cypress.io/api/commands/fixture.html) files can be added to `cypress/fixtures/`. The support file `cypress/support/index.js` runs before every spec file and is the place to store reusable behavior (such as navigating to the home page).
+New tests can be added to `tests/cypress/integration/`. [Fixture data](https://docs.cypress.io/api/commands/fixture.html) files can be added to `tests/cypress/fixtures/`. The support file `tests/cypress/support/index.js` runs before every spec file and is the place to store reusable behavior (such as navigating to the home page).
 
 To create a new spec file, use the syntax `test-name_test.spec.js`. Use the Mocha function `describe()` to group the tests in each file. Use `it()` to identify individual tests. Avoid the temptation to write an `it()` function for every assertion, as you might when unit testing. Integration tests can include multiple assertions and will run more efficiently this way.
 
@@ -128,4 +128,4 @@ Note that for testing across screen sizes, Cypress offers [viewport presets](htt
 
 To run tests headlessly, run the command `composer functional-test`. To run tests within the browser and view step-by-step snapshots, run `composer functional-test-open`. To run both Cypress and PHPunit tests, run `composer test`.
 
-An mp4 of the most recent run of each spec file is stored in `cypress/videos`.
+An mp4 of the most recent run of each spec file is stored in `tests/cypress/videos`.
