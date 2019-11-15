@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<phpunit bootstrap="tests/unit/bootstrap.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory prefix="Test" suffix=".php">./tests/*</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-html"
+             target="tests/coverage"
+             showUncoveredFiles="true"
+             lowUpperBound="35"
+             highLowerBound="70"/>
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./web/wp-content/themes/lean-theme/backend</directory>
+            <exclude>
+                <directory suffix=".php">./tests</directory>
+                <directory suffix=".php">./vendor</directory>
+                <directory suffix=".php">./web/wp-content/themes/lean-theme/backend/WP</directory>
+                <directory suffix=".php">./web/wp-content/themes/lean-theme/backend/Backend.php</directory>
+                <directory suffix=".php">./web/wp-content/themes/lean-theme/backend/functions</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
