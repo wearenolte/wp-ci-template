@@ -76,9 +76,23 @@ class ScriptHandler
     $fs->remove($dirsToDelete);
 
     // Fix up .gitignore: remove everything above the "::: cut :::" line
-    $gitignoreFile = getcwd() . '/.gitignore';
-    $gitignoreContents = file_get_contents($gitignoreFile);
-    $gitignoreContents = preg_replace('/.*::: cut :::*/s', '', $gitignoreContents);
-    file_put_contents($gitignoreFile, $gitignoreContents);
+    $gitignoreFiles = [];
+
+    // Root .gitignore
+    $gitignoreFiles[] = getcwd() . '/.gitignore';
+
+    // Lean Theme .gitignore
+    $root = static::getWordPressRoot(getcwd());
+    $lean_theme_gitignore = $root . '/wp-content/themes/lean-theme/.gitignore';
+
+    if ($fs->exists($lean_theme_gitignore)) {
+      $gitignoreFiles[] = $lean_theme_gitignore;
+    }
+
+    foreach ($gitignoreFiles as $gitignoreFile) {
+      $gitignoreContents = file_get_contents($gitignoreFile);
+      $gitignoreContents = preg_replace('/.*::: cut :::*/s', '', $gitignoreContents);
+      file_put_contents($gitignoreFile, $gitignoreContents);
+    }
   }
 }

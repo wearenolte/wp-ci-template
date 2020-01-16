@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -eo pipefail
+
+#
+# This script checks the $TERMINUS_ENV variable to reassign the branch name.
+#
+
+# Set up BASH_ENV if it was not set for us.
+BASH_ENV=${BASH_ENV:-$HOME/.bashrc}
+
+if [[ $TERMINUS_ENV == *"ci-"* ]]; then
+    WORD_TO_REMOVE=""
+    # To lowercase
+    NEW_TERMINUS_ENV="$(echo $CI_BRANCH | tr '[:upper:]' '[:lower:]')"
+
+    if [[ $NEW_TERMINUS_ENV == *"feature/"* ]]; then
+        WORD_TO_REMOVE="feature/"
+    elif [[ $NEW_TERMINUS_ENV == *"bugfix/"* ]]; then
+        WORD_TO_REMOVE="bugfix/"
+    elif [[ $NEW_TERMINUS_ENV == *"hotfix/"* ]]; then
+        WORD_TO_REMOVE="hotfix/"
+    elif [[ $NEW_TERMINUS_ENV == *"release/"* ]]; then
+        WORD_TO_REMOVE="release/"
+    fi
+
+    NEW_TERMINUS_ENV=${NEW_TERMINUS_ENV//$WORD_TO_REMOVE/}
+    NEW_TERMINUS_ENV="$(echo ${NEW_TERMINUS_ENV:0:10})"
+    echo "export TERMINUS_ENV='$NEW_TERMINUS_ENV'" >> $BASH_ENV
+fi

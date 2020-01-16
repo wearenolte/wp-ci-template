@@ -3,8 +3,7 @@
 ###
 
 # Ignore packages and dependencies directories
-vendor
-node_modules
+vendor/
 
 # Webroot #
 ###########
@@ -71,6 +70,8 @@ web/wp-content/wp-cache-config.php
 web/sitemap.xml
 web/sitemap.xml.gz
 *.log
+.env
+auth.json
 
 # @TODO writable paths
 web/wp-content/cache/
@@ -118,6 +119,12 @@ Thumbs.db
 # IDE generated files #
 #######################
 .idea/
+
+
+# Node #
+#######################
+node_modules/
+
 
 # Test framework generated files #
 ##################################
