@@ -3,7 +3,7 @@
 set -eo pipefail
 
 #
-# This script checks the $TERMINUS_ENV variable to reasign the branch name.
+# This script checks the $TERMINUS_ENV variable to reassign the branch name.
 #
 
 # Set up BASH_ENV if it was not set for us.
