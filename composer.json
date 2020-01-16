@@ -64,8 +64,7 @@
     "build-env": {
       "install-cms": [
         "wp core install --title={site-name} --url={site-url} --admin_user={account-name} --admin_email={account-mail} --admin_password={account-pass}",
-        "wp option update permalink_structure '/%postname%/'",
-        "wp theme activate lean-theme"
+        "wp option update permalink_structure '/%postname%/'"
       ]
     },
     "installer-paths": {
@@ -84,8 +83,7 @@
     "build-assets": [
       "@prepare-for-pantheon",
       "yarn",
-      "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress",
-      "@build-theme-assets"
+      "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
     ],
     "build-theme-assets": [
       "cd web/wp-content/themes/lean-theme && composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
