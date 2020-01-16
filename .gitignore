@@ -102,7 +102,7 @@ pantheon.upstream.yml
 ######################
 .DS_Store*
 ehthumbs.db
-Icon?
+Icon[\r]
 Thumbs.db
 ._*
 
