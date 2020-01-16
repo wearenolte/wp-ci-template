@@ -97,18 +97,18 @@
     ],
     "post-install-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "./scripts/composer/build-lean-theme-assets"
     ],
     "post-update-cmd": [
       "@cleanup",
       "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
-      "@update-theme-assets",
-      "@build-theme-assets"
+      "./scripts/composer/update-lean-theme-assets"
     ],
     "post-create-project-cmd": [
       "@cleanup",
       "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
-      "@build-theme-assets"
+      "./scripts/composer/update-lean-theme-assets"
     ],
     "code-sniff": [
       "./vendor/bin/phpcs --standard=WordPress ./web/wp-content/themes"

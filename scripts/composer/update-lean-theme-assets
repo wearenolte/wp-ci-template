@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Update Lean Theme assets (if directory exists).
+if [ -d "web/wp-content/themes/lean-theme" ]; then
+  composer -n update-theme-assets
+fi

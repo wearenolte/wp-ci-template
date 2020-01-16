@@ -10,8 +10,3 @@ set -eo pipefail
 
 # Build Composer Assets
 composer -n build-assets
-
-# Build theme assets
-if [ -d "web/wp-content/themes/lean-theme" ]; then
-  composer -n build-theme-assets
-fi
