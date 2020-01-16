@@ -98,7 +98,8 @@
       "./vendor/bin/phpcs --standard=WordPress ./web/wp-content/themes"
     ],
     "unit-test": [
-      "./vendor/bin/phpunit tests/unit/*"
+      "./vendor/bin/phpunit tests/unit/*",
+      "php coverage-checker.php clover.xml 80"
     ],
     "lint": "find web/wp-content -name '*.php' -exec php -l {} \\;"
   }
