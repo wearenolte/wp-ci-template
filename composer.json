@@ -9,12 +9,12 @@
       "url": "https://wpackagist.org"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/pantheon-systems/wordpress-composer"
+      "type": "composer",
+			"url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress"
     },
     {
       "type": "vcs",
-      "url": "https://github.com/wearenolte/lean-theme.git"
+      "url": "https://github.com/pantheon-systems/wordpress-composer"
     }
   ],
   "require": {
@@ -25,11 +25,18 @@
     "roots/wp-password-bcrypt": "^1.0.0",
     "rvtraveller/qs-composer-installer": "^1.1",
     "vlucas/phpdotenv": "^3.1.0",
+    "wpackagist-theme/twentynineteen": "^1.2",
     "wpackagist-plugin/lh-hsts": "^1.24",
     "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
-    "wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
-    "wpackagist-theme/twentynineteen": "^1.2",
-    "wearenolte/lean-theme": "1.0"
+    "wpackagist-plugin/postmark-approved-wordpress-plugin": "dev-trunk",
+    "wpackagist-plugin/wordpress-seo": "dev-trunk",
+    "wpackagist-plugin/stream": "dev-trunk",
+    "wpackagist-plugin/automatic-alternative-text": "dev-trunk",
+    "wpackagist-plugin/wp-help": "dev-trunk",
+    "wpackagist-plugin/acf-image-aspect-ratio-crop":"dev-trunk",
+    "nolte-wpackagist/advanced-custom-fields-pro": ">=5.8",
+    "nolte-wpackagist/wpmudev-updates": ">=4.7.3.5",
+    "nolte-wpackagist/wp-smush-pro": ">=3.3.2"
   },
   "require-dev": {
     "behat/mink-goutte-driver": "^1.2.1",
@@ -41,7 +48,7 @@
     "phpunit/phpunit": "^7.5.1",
     "roave/security-advisories": "dev-master",
     "squizlabs/php_codesniffer": "^3.4.0",
-    "wp-coding-standards/wpcs": "^1.2.1"
+    "wp-coding-standards/wpcs": "^2.2"
   },
   "config": {
     "vendor-dir": "vendor",
@@ -78,7 +85,13 @@
       "@prepare-for-pantheon",
       "yarn",
       "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress",
+      "@build-theme-assets"
+    ],
+    "build-theme-assets": [
       "cd web/wp-content/themes/lean-theme && composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
+    ],
+    "update-theme-assets": [
+      "cd web/wp-content/themes/lean-theme && composer update --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
     ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
@@ -86,15 +99,19 @@
     ],
     "post-install-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "@build-theme-assets"
     ],
     "post-update-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "@update-theme-assets",
+      "@build-theme-assets"
     ],
     "post-create-project-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
+      "@build-theme-assets"
     ],
     "code-sniff": [
       "./vendor/bin/phpcs --standard=WordPress ./web/wp-content/themes"
