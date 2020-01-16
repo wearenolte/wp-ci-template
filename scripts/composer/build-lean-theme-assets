@@ -2,10 +2,10 @@
 
 set -eo pipefail
 
-# Build Lean Theme assets (if directory exists).
-LEANTHEME=web/wp-content/themes/lean-theme
+# Build Lean Theme assets (if composer exists).
+LT_COMPOSER=web/wp-content/themes/lean-theme/composer.json
 
-if [ -d "$LEANTHEME" ]; then
+if [ -f "$LT_COMPOSER" ]; then
   echo "Lean Theme is installed"
   composer -n build-theme-assets
 else
