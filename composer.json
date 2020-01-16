@@ -76,7 +76,9 @@
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
-      "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
+      "yarn",
+      "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress",
+      "cd web/wp-content/themes/lean-theme && composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
     ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
@@ -100,6 +102,16 @@
     "unit-test": [
       "./vendor/bin/phpunit tests/unit/*",
       "php coverage-checker.php clover.xml 80"
+    ],
+    "functional-test": [
+      "./tests/cypress/run"
+    ],
+    "functional-test-open": [
+      "./tests/cypress/open"
+    ],
+    "test": [
+      "@unit-test",
+      "@functional-test"
     ],
     "lint": "find web/wp-content -name '*.php' -exec php -l {} \\;"
   }
