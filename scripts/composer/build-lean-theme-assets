@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Build Lean Theme assets (if directory exists).
+if [ -d "web/wp-content/themes/lean-theme" ]; then
+  composer -n build-theme-assets
+fi
