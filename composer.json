@@ -97,8 +97,7 @@
     ],
     "post-install-cmd": [
       "@cleanup",
-      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles",
-      "@build-theme-assets"
+      "WordPressProject\\composer\\ScriptHandler::createRequiredFiles"
     ],
     "post-update-cmd": [
       "@cleanup",
