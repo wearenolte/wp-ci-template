@@ -37,6 +37,8 @@ A custom, [Composer version of WordPress for Pantheon](https://github.com/panthe
 
 Third party WordPress dependencies, such as plugins and themes, are added to the project via `composer.json`. The `composer.lock` file keeps track of the exact version of dependency. [Composer `installer-paths`](https://getcomposer.org/doc/faqs/how-do-i-install-a-package-to-a-custom-path-for-my-framework.md#how-do-i-install-a-package-to-a-custom-path-for-my-framework-) are used to ensure the WordPress dependencies are downloaded into the appropriate directory.
 
+We do not allow plugin installs from the public wpackagist repository. All plugins must be installed from our [nolte-wpackagist](https://dev-nolte-wpackagist.pantheonsite.io/wp-admin/options-general.php?page=satispress#satispress-packages) instead. This ensures only approved plugins are used.
+
 Non-WordPress dependencies are downloaded to the `/vendor` directory.
 
 ### `.ci`

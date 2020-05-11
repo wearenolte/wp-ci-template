@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9a825eb82dc76a6dfec20c83c19d70f3",
+    "content-hash": "c7efbe4a52e68b20d06e10c7e90f056a",
     "packages": [
         {
             "name": "composer/installers",
@@ -177,6 +177,25 @@
             "time": "2015-06-11T15:15:30+00:00"
         },
         {
+            "name": "nolte-wpackagist/acf-image-aspect-ratio-crop",
+            "version": "3.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/acf-image-aspect-ratio-crop/3.2.0",
+                "shasum": "5c222aa9bf739518fc872b7b3a6418f9ed0110bf"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Johannes Siipola",
+                "homepage": "https://siipo.la"
+            },
+            "description": "ACF field that allows user to crop image to a specific aspect ratio",
+            "homepage": "https://github.com/joppuyo/acf-image-aspect-ratio-crop"
+        },
+        {
             "name": "nolte-wpackagist/advanced-custom-fields-pro",
             "version": "5.8.7",
             "dist": {
@@ -194,6 +213,215 @@
             },
             "description": "Customize WordPress with powerful, professional and intuitive fields.",
             "homepage": "https://www.advancedcustomfields.com"
+        },
+        {
+            "name": "nolte-wpackagist/googleappslogin-enterprise",
+            "version": "3.2.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/googleappslogin-enterprise/3.2.4",
+                "shasum": "3fe6e6796a42bda292d222fae33fd92ae964f36e"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Lever Technology LLC",
+                "homepage": "http://wp-glogin.com/"
+            },
+            "description": "Simple secure login and user management for Wordpress through your Google Apps domain (uses secure OAuth2, and MFA if enabled)",
+            "homepage": "http://wp-glogin.com/"
+        },
+        {
+            "name": "nolte-wpackagist/gravityforms",
+            "version": "2.4.17",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/gravityforms/2.4.17",
+                "shasum": "2261deb5788d9b894f29549693692560e371042c"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "rocketgenius",
+                "homepage": "https://www.rocketgenius.com"
+            },
+            "description": "Easily create web forms and manage form entries within the WordPress admin.",
+            "homepage": "https://www.gravityforms.com"
+        },
+        {
+            "name": "nolte-wpackagist/lh-hsts",
+            "version": "1.25",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/lh-hsts/1.25",
+                "shasum": "e33d9bd334a720be4cebdd9422f8a0214a529765"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Peter Shaw",
+                "homepage": "https://shawfactor.com/"
+            },
+            "description": "Adds HTTP Strict Transport Security to wordpress, options can be changed by filters",
+            "homepage": "https://lhero.org/portfolio/lh-hsts/"
+        },
+        {
+            "name": "nolte-wpackagist/pantheon-advanced-page-cache",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/pantheon-advanced-page-cache/1.0.0",
+                "shasum": "738f5d6e01e1aacd9d2296a9d918d5a76a0e778f"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Pantheon",
+                "homepage": "https://pantheon.io"
+            },
+            "description": "Automatically clear related pages from Pantheon's Edge when you update content. High TTL. Fresh content. Visitors never wait.",
+            "homepage": "https://wordpress.org/plugins/pantheon-advanced-page-cache/"
+        },
+        {
+            "name": "nolte-wpackagist/postmark-approved-wordpress-plugin",
+            "version": "1.12.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/postmark-approved-wordpress-plugin/1.12.3",
+                "shasum": "7e5d45adffa141245e9a499cd10d664c0bad0886"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Andrew Yates & Matt Gibbs",
+                "homepage": ""
+            },
+            "description": "Overrides wp_mail to send emails through Postmark",
+            "homepage": "https://postmarkapp.com/"
+        },
+        {
+            "name": "nolte-wpackagist/regenerate-thumbnails",
+            "version": "3.1.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/regenerate-thumbnails/3.1.3",
+                "shasum": "8292c7e3b485bade03777602c25f16bed0582062"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Alex Mills (Viper007Bond)",
+                "homepage": "https://alex.blog/"
+            },
+            "description": "Regenerate the thumbnails for one or more of your image uploads. Useful when changing their sizes or your theme.",
+            "homepage": "https://alex.blog/wordpress-plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "nolte-wpackagist/stream",
+            "version": "3.4.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/stream/3.4.3",
+                "shasum": "f08b1c46bbadbb3919e85f2875f89f7d664d973f"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "XWP",
+                "homepage": "https://xwp.co"
+            },
+            "description": "Stream tracks logged-in user activity so you can monitor every change made on your WordPress site in beautifully organized detail. All activity is organized by context, action and IP address for easy filtering. Developers can extend Stream with custom connectors to log any kind of action.",
+            "homepage": "https://wp-stream.com"
+        },
+        {
+            "name": "nolte-wpackagist/twentytwenty",
+            "version": "1.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/twentytwenty/1.2",
+                "shasum": "691ca312110b63c7c9b50834ef1e7bfb460528b6"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-theme",
+            "authors": {
+                "name": "the WordPress team",
+                "homepage": "https://wordpress.org/"
+            },
+            "description": "Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.",
+            "homepage": "https://wordpress.org/themes/twentytwenty/"
+        },
+        {
+            "name": "nolte-wpackagist/wordpress-seo",
+            "version": "14.0.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/wordpress-seo/14.0.4",
+                "shasum": "fb3b485064d6aee0e3535639db544e04acdd15a2"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Team Yoast",
+                "homepage": "https://yoa.st/1uk"
+            },
+            "description": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
+            "homepage": "https://yoa.st/1uj"
+        },
+        {
+            "name": "nolte-wpackagist/worker",
+            "version": "4.9.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/worker/4.9.6",
+                "shasum": "2548fac9476fce4b0e13610afdece916e415b4d2"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "GoDaddy",
+                "homepage": "https://godaddy.com"
+            },
+            "description": "We help you efficiently manage all your WordPress websites. <strong>Updates, backups, 1-click login, migrations, security</strong> and more, on one dashboard. This service comes in two versions: standalone <a href=\"https://managewp.com\">ManageWP</a> service that focuses on website management, and <a href=\"https://godaddy.com/pro\">GoDaddy Pro</a> that includes additional tools for hosting, client management, lead generation, and more.",
+            "homepage": "https://managewp.com"
+        },
+        {
+            "name": "nolte-wpackagist/wp-help",
+            "version": "1.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/wp-help/1.7.0",
+                "shasum": "c1626d4162be66db00f5d1ab28d01f181d5719f3"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "Mark Jaquith",
+                "homepage": "http://coveredwebservices.com/"
+            },
+            "description": "Administrators can create detailed, hierarchical documentation for the site's authors and editors, viewable in the WordPress admin.",
+            "homepage": "http://txfx.net/wordpress-plugins/wp-help/"
         },
         {
             "name": "nolte-wpackagist/wp-smush-pro",
@@ -556,174 +784,6 @@
                 "environment"
             ],
             "time": "2019-09-10T21:37:39+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/acf-image-aspect-ratio-crop",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/acf-image-aspect-ratio-crop/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-image-aspect-ratio-crop.zip?timestamp=1574785227"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/acf-image-aspect-ratio-crop/",
-            "time": "2019-11-26T16:20:27+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/automatic-alternative-text",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/automatic-alternative-text/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/automatic-alternative-text.zip?timestamp=1561974066"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/automatic-alternative-text/",
-            "time": "2019-07-01T09:41:06+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/lh-hsts",
-            "version": "1.25",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/lh-hsts/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/lh-hsts.zip?timestamp=1558146276"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/lh-hsts/"
-        },
-        {
-            "name": "wpackagist-plugin/pantheon-advanced-page-cache",
-            "version": "0.3.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/pantheon-advanced-page-cache/",
-                "reference": "tags/0.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.3.1.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/pantheon-advanced-page-cache/"
-        },
-        {
-            "name": "wpackagist-plugin/postmark-approved-wordpress-plugin",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/postmark-approved-wordpress-plugin/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/postmark-approved-wordpress-plugin.zip?timestamp=1572628906"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/postmark-approved-wordpress-plugin/",
-            "time": "2019-11-01T17:21:46+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/stream",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/stream/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.zip?timestamp=1569497992"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/stream/",
-            "time": "2019-09-26T11:39:52+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/wordpress-seo",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip?timestamp=1579092034"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/",
-            "time": "2020-01-15T12:40:34+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/wp-help",
-            "version": "dev-trunk",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-help/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-help.zip?timestamp=1573787718"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-help/",
-            "time": "2019-11-15T03:15:18+00:00"
-        },
-        {
-            "name": "wpackagist-theme/twentynineteen",
-            "version": "1.4",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.4.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/twentynineteen/"
         }
     ],
     "packages-dev": [
@@ -5126,6 +5186,60 @@
             "time": "2019-11-11T12:34:03+00:00"
         },
         {
+            "name": "wpackagist-plugin/lh-hsts",
+            "version": "1.25",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/lh-hsts/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/lh-hsts.zip?timestamp=1558146276"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/lh-hsts/"
+        },
+        {
+            "name": "wpackagist-plugin/pantheon-advanced-page-cache",
+            "version": "0.3.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/pantheon-advanced-page-cache/",
+                "reference": "tags/0.3.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.3.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/pantheon-advanced-page-cache/"
+        },
+        {
+            "name": "wpackagist-theme/twentynineteen",
+            "version": "1.4",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/twentynineteen/",
+                "reference": "1.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.4.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-theme",
+            "homepage": "https://wordpress.org/themes/twentynineteen/"
+        },
+        {
             "name": "zendframework/zend-code",
             "version": "3.4.1",
             "source": {
@@ -5242,12 +5356,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "wpackagist-plugin/postmark-approved-wordpress-plugin": 20,
-        "wpackagist-plugin/wordpress-seo": 20,
-        "wpackagist-plugin/stream": 20,
-        "wpackagist-plugin/automatic-alternative-text": 20,
-        "wpackagist-plugin/wp-help": 20,
-        "wpackagist-plugin/acf-image-aspect-ratio-crop": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
@@ -5258,5 +5366,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.2"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
