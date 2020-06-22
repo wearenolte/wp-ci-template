@@ -1,0 +1,21 @@
+{
+  "ci": {
+    "collect": {
+      "upload": {
+        "target": "filesystem",
+        "outputDir": "./tests/lighthouse/reports/"
+      },
+      "settings": {
+        "chromeFlags": "--headless"
+      }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.9 }],
+        "categories:accessibility": ["warn", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }],
+        "categories:seo": ["warn", { "minScore": 0.9 }]
+      }
+    }
+  }
+}

@@ -4,10 +4,10 @@ import json
 exit_code = 0
 
 TARGETS = {}
-TARGETS['performance'] = .7
-TARGETS['seo'] = .8
-TARGETS['accessibility'] = .8
-TARGETS['best-practices'] = .8
+TARGETS['performance'] = .9
+TARGETS['seo'] = .9
+TARGETS['accessibility'] = .9
+TARGETS['best-practices'] = .9
 
 with open('tests/lighthouse/reports/report.json') as f:
   report = json.load(f)
