@@ -1,0 +1,11 @@
+#!/bin/bash
+
+TEST_ENV=$(./tests/geturl $1)
+
+echo "Running Lighthouse against $TEST_ENV..."
+
+lighthouse $TEST_ENV --output=json --output-path=./tests/lighthouse/reports/report.json --save-assets --chrome-flags="--headless"
+
+python3 tests/lighthouse/evaluate.py
+
+exit $?

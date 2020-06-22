@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#
+# Utility script to get the envrionment URL for automated tests.
+#
+
+# Use the URL passed in as the first argument.
+if [ ! -z "$1" ]; then
+  URL=$1
+
+else
+  LANDO_APP_NAME=$(grep -w "name:" .lando.yml | cut -f2- -d: | tr -d '[:space:]')
+
+  # If not running in CI then get the local Lando URL.
+  if [ -z "$CI" ]; then
+    URL="http://$LANDO_APP_NAME.lndo.site"
+
+  # If running in CI then get the Pantheon multidev URL.
+  else
+    URL="https://$TERMINUS_ENV-$LANDO_APP_NAME.pantheonsite.io"
+  fi
+fi
+
+echo $URL
