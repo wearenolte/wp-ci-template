@@ -77,6 +77,15 @@ definitions:
           - ./.ci/test/visual-regression/run
         artifacts:
           - backstop_data/**
+    - step: &lighthouse_test
+        name: Run Lighthouse Tests
+        services:
+          - docker
+        script:
+          - *bash_env_export
+          - *bash_env_source
+          - npm i -g @lhci/cli
+          - ./tests/lighthouse/run
     - step: &functional_test
         name: Test Behat
         services:
@@ -115,6 +124,7 @@ pipelines:
         - step: *build
       - step: *deploy
       - step: *ui_test
+      - step: *lighthouse_test
       - step: *functional_test
   pull-requests:
     'clu-*':
@@ -124,6 +134,7 @@ pipelines:
         - step: *build
       - step: *deploy
       - step: *ui_test
+      - step: *lighthouse_test
       - step: *functional_test
   custom:
     clu:

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TEST_ENV=$(./tests/geturl $1)
+
+echo "Begin Lighthouse setup and healthcheck..."
+
+lhci healthcheck
+
+echo "Running Lighthouse against $TEST_ENV..."
+
+lhci collect --url $TEST_ENV
+lhci assert
+
+exit $?
