@@ -86,6 +86,8 @@ definitions:
           - *bash_env_source
           - npm i -g @lhci/cli
           - ./tests/lighthouse/run
+        artifacts:
+          - tests/**
     - step: &functional_test
         name: Test Behat
         services:
@@ -126,6 +128,7 @@ pipelines:
       - step: *ui_test
       - step: *lighthouse_test
       - step: *functional_test
+
   pull-requests:
     'clu-*':
       - step: *env_vars
