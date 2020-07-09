@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7efbe4a52e68b20d06e10c7e90f056a",
+    "content-hash": "00e961b6dd882ee2cc33abe032cde15e",
     "packages": [
         {
             "name": "composer/installers",
@@ -329,6 +329,25 @@
             "homepage": "https://alex.blog/wordpress-plugins/regenerate-thumbnails/"
         },
         {
+            "name": "nolte-wpackagist/shortpixel-image-optimiser",
+            "version": "4.19.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/shortpixel-image-optimiser/4.19.2",
+                "shasum": "d5b6d9e1da1686e7a8e773dc2c5cc36f20e6db41"
+            },
+            "require": {
+                "composer/installers": "^1.0"
+            },
+            "type": "wordpress-plugin",
+            "authors": {
+                "name": "ShortPixel",
+                "homepage": "https://shortpixel.com"
+            },
+            "description": "ShortPixel optimizes images automatically, while guarding the quality of your images. Check your <a href=\"options-general.php?page=wp-shortpixel-settings\" target=\"_blank\">Settings &gt; ShortPixel</a> page on how to start optimizing your image library and make your website load faster.",
+            "homepage": "https://shortpixel.com/"
+        },
+        {
             "name": "nolte-wpackagist/stream",
             "version": "3.4.3",
             "dist": {
@@ -422,44 +441,6 @@
             },
             "description": "Administrators can create detailed, hierarchical documentation for the site's authors and editors, viewable in the WordPress admin.",
             "homepage": "http://txfx.net/wordpress-plugins/wp-help/"
-        },
-        {
-            "name": "nolte-wpackagist/wp-smush-pro",
-            "version": "3.4.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/wp-smush-pro/3.4.2",
-                "shasum": "c5621899f80fe6e863e9593b4e2ac296babef9ca"
-            },
-            "require": {
-                "composer/installers": "^1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "WPMU DEV",
-                "homepage": "https://premium.wpmudev.org/"
-            },
-            "description": "Reduce image file sizes, improve performance and boost your SEO using the <a href=\"https://premium.wpmudev.org/\">WPMU DEV</a> WordPress Smush API.",
-            "homepage": "http://premium.wpmudev.org/projects/wp-smush-pro/"
-        },
-        {
-            "name": "nolte-wpackagist/wpmudev-updates",
-            "version": "4.7.5",
-            "dist": {
-                "type": "zip",
-                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/wpmudev-updates/4.7.5",
-                "shasum": "a3e3fa1e737da365eb3a6d68be860efca50d018b"
-            },
-            "require": {
-                "composer/installers": "^1.0"
-            },
-            "type": "wordpress-plugin",
-            "authors": {
-                "name": "WPMU DEV",
-                "homepage": "https://premium.wpmudev.org/"
-            },
-            "description": "Brings the powers of WPMU DEV directly to you. It will revolutionize how you use WordPress. Activate now!",
-            "homepage": "https://premium.wpmudev.org/project/wpmu-dev-dashboard/"
         },
         {
             "name": "pantheon-systems/quicksilver-pushback",
