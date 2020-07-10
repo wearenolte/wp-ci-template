@@ -128,7 +128,6 @@ pipelines:
       - step: *ui_test
       - step: *lighthouse_test
       - step: *functional_test
-
   pull-requests:
     'clu-*':
       - step: *env_vars

@@ -1,10 +1,15 @@
 #!/bin/bash
 
 TEST_ENV=$(./tests/geturl $1)
+
 echo "Begin Lighthouse setup and healthcheck..."
+
 lhci healthcheck
+
 echo "Running Lighthouse against $TEST_ENV..."
+
 lhci collect --url $TEST_ENV --output=html --config=./tests/lighthouse/.lighthouserc.json
 lhci assert --config=./tests/lighthouse/.lighthouserc.json
 lhci upload --target=filesystem --outputDir=./tests/lighthouse/reports/
+
 exit $?
