@@ -8,7 +8,8 @@ lhci healthcheck
 
 echo "Running Lighthouse against $TEST_ENV..."
 
-lhci collect --url $TEST_ENV
-lhci assert
+lhci collect --url $TEST_ENV --output=html --config=./tests/lighthouse/.lighthouserc.json
+lhci assert --config=./tests/lighthouse/.lighthouserc.json
+lhci upload --target=filesystem --outputDir=./tests/lighthouse/reports/
 
 exit $?
