@@ -3,7 +3,7 @@
     "collect": {
       "upload": {
         "target": "filesystem",
-        "outputDir": "./tests/lighthouse/reports/"
+        "outputDir": "tests/lighthouse/reports/"
       },
       "settings": {
         "chromeFlags": "--headless"

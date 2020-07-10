@@ -87,7 +87,7 @@ definitions:
           - npm i -g @lhci/cli
           - ./tests/lighthouse/run
         artifacts:
-          - tests/**
+          - tests/lighthouse/reports/**
     - step: &functional_test
         name: Test Behat
         services:
