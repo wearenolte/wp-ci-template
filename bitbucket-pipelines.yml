@@ -108,7 +108,20 @@ definitions:
           - ./.ci/test/behat/cleanup
         artifacts:
           - behat-screenshots/**
-
+    - step: &happo_test
+        name: Run Happo tests
+        image: cypress/base:10
+        services:
+          - docker
+        script:
+          - *bash_env_export
+          - *bash_env_source
+          - npm install --save-dev happo-cypress cypress happo.io
+          - chmod +x ./tests/geturl
+          - export CYPRESS_URL=$(./tests/geturl $1)
+          - yarn happo-cypress -- -- yarn cypress run
+        artifacts:
+          - tests/cypress/**
 image: quay.io/pantheon-public/build-tools-ci:6.x
 
 options:
@@ -127,6 +140,7 @@ pipelines:
       - step: *deploy
       - step: *ui_test
       - step: *lighthouse_test
+      - step: *happo_test
       - step: *functional_test
   pull-requests:
     'clu-*':

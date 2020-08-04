@@ -14,12 +14,3 @@ Feature: Change blogname and blogdescription
     And I press "submit"
     Then I should see "Settings saved."
     And I take a Chrome screenshot "settings-menu-after-blogname-changes.png"
-
-  Scenario: Verifying blogname and blogdescription
-    Given I am on the homepage
-    And the Pantheon cache has been cleared
-    Then I should be on the homepage
-    And I should not be logged in
-    And I take a Chrome screenshot "homepage-after-blogname-changes.png"
-    And I should see "Awesome WordHat Test Site!" in the ".site-title > a" element
-    And I should see "Composer + CI + Pantheon is a win!" in the ".site-description" element

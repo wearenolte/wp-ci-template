@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Add image to library for tests.
+
+IMG_URL='https://via.placeholder.com/1920x1440.jpg?text=This+is+a+test+image'
+IMG_TITLE='test-image'
+
+# If local environment.
+if [[ -v LANDO_APP_NAME ]]; then
+  wp media import $IMG_URL --title=$IMG_TITLE --alt=$IMG_TITLE
+fi

@@ -20,5 +20,4 @@ else
     URL="https://$TERMINUS_ENV-$LANDO_APP_NAME.pantheonsite.io"
   fi
 fi
-
 echo $URL

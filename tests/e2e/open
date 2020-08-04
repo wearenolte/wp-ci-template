@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ENV_FILE=".env"
+set -a; [ -f $ENV_FILE ] && . $ENV_FILE; set +a
+
+#
+# This script runs the Cypress tests.
+#
+
+export TERM=xterm
+
+# Validate if is Local Environment.
+if [[ -v LANDO_APP_NAME ]]; then
+  if [[ ! -v LOCAL_BASE_URL ]]; then
+    LOCAL_BASE_URL="http://$LANDO_APP_NAME.lndo.site"
+    if [[ -s $ENV_FILE ]]; then
+      printf "\n" >> $ENV_FILE
+    fi
+    printf "LOCAL_BASE_URL=${LOCAL_BASE_URL}" >> $ENV_FILE
+  fi
+
+  if [[ -v WP_USERNAME ]] && [[ -v WP_PASSWORD ]]; then
+    #export TERM=xterm-256color
+    yarn cypress open --config baseUrl=$LOCAL_BASE_URL --env WP_USER=$WP_USERNAME WP_PASSWORD=$WP_PASSWORD
+  else
+    echo 'You need to set WP_USERNAME and WP_PASSWORD in a .env file in the root of your project.'
+  fi
+else
+  echo 'No LANDO_APP_NAME found.'
+fi
+# TODO: set base_URL for Pipelines.
