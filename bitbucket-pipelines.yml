@@ -88,6 +88,22 @@ definitions:
           - ./tests/lighthouse/run
         artifacts:
           - tests/lighthouse/reports/**
+    - step: &cypress
+         name: Run Cypress Tests
+         services:
+           - docker
+         script:
+           - *bash_env_export
+           - *bash_env_source
+           - npm install
+           - export HAPPO_CURRENT_SHA=$BITBUCKET_COMMIT && echo $HAPPO_CURRENT_SHA
+           - export HAPPO_PREVIOUS_SHA=$([[ $BITBUCKET_PR_DESTINATION_BRANCH != "" ]] && git rev-parse origin/$BITBUCKET_PR_DESTINATION_BRANCH) && echo $HAPPO_PREVIOUS_SHA
+           - export HAPPO_CHANGE_URL=$([[ $BITBUCKET_PR_ID != "" ]] && $CI_PR_URL) && echo $HAPPO_CHANGE_URL
+           - ./tests/cypress/run
+         image: cypress/included:4.7.0
+         artifacts:
+          - tests/cypress/screenshots/**
+          - tests/cypress/videos/**
     - step: &functional_test
         name: Test Behat
         services:
