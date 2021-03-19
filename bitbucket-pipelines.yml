@@ -89,41 +89,21 @@ definitions:
         artifacts:
           - tests/lighthouse/reports/**
     - step: &cypress
-         name: Run Cypress Tests
-         services:
-           - docker
-         script:
-           - *bash_env_export
-           - *bash_env_source
-           - npm install
-           - export HAPPO_CURRENT_SHA=$BITBUCKET_COMMIT && echo $HAPPO_CURRENT_SHA
-           - export HAPPO_PREVIOUS_SHA=$([[ $BITBUCKET_PR_DESTINATION_BRANCH != "" ]] && git rev-parse origin/$BITBUCKET_PR_DESTINATION_BRANCH) && echo $HAPPO_PREVIOUS_SHA
-           - export HAPPO_CHANGE_URL=$([[ $BITBUCKET_PR_ID != "" ]] && $CI_PR_URL) && echo $HAPPO_CHANGE_URL
-           - ./tests/cypress/run
-         image: cypress/included:4.7.0
-         artifacts:
-          - tests/cypress/screenshots/**
-          - tests/cypress/videos/**
-    - step: &functional_test
-        name: Test Behat
+        name: Run Cypress Tests
         services:
-            - docker
-        caches:
-            - docker
-            - composer
+          - docker
         script:
           - *bash_env_export
           - *bash_env_source
-          - ./.ci/test/behat/initialize
-          # Start headless Chrome
-          - google-chrome --disable-gpu --headless --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --no-sandbox </dev/null &>/dev/null &
-          - ./.ci/test/behat/run
-        after-script:
-          - *bash_env_export
-          - *bash_env_source
-          - ./.ci/test/behat/cleanup
+          - npm install
+          - export HAPPO_CURRENT_SHA=$BITBUCKET_COMMIT && echo $HAPPO_CURRENT_SHA
+          - export HAPPO_PREVIOUS_SHA=$([[ $BITBUCKET_PR_DESTINATION_BRANCH != "" ]] && git rev-parse origin/$BITBUCKET_PR_DESTINATION_BRANCH) && echo $HAPPO_PREVIOUS_SHA
+          - export HAPPO_CHANGE_URL=$([[ $BITBUCKET_PR_ID != "" ]] && $CI_PR_URL) && echo $HAPPO_CHANGE_URL
+          - ./tests/cypress/run
+        image: cypress/included:4.7.0
         artifacts:
-          - behat-screenshots/**
+         - tests/cypress/screenshots/**
+         - tests/cypress/videos/**
 
 image: quay.io/pantheon-public/build-tools-ci:6.x
 
