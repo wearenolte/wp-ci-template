@@ -20,4 +20,4 @@ if [[ -z $LOCAL_BASE_URL ]]; then
 fi
 
 export CYPRESS_HOST=$LOCAL_BASE_URL
-yarn run cypress run
+yarn run happo-cypress -- cypress run
