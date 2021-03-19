@@ -4,5 +4,9 @@
   },
   "scripts": {
     "cypress": "./node_modules/.bin/cypress"
+  },
+  "dependencies": {
+    "happo-cypress": "^1.9.3",
+    "happo.io": "^6.1.0"
   }
 }
