@@ -6,7 +6,7 @@
   "repositories": [
     {
       "type": "composer",
-			"url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/"
+      "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/"
     },
     {
       "type": "vcs",
