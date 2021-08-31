@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "275a611e484bc14ff00426d41c933be7",
+    "content-hash": "3a23342e759fca16781687df4f447de9",
     "packages": [
         {
             "name": "composer/installers",
@@ -239,12 +239,12 @@
             "homepage": "https://www.advancedcustomfields.com"
         },
         {
-            "name": "nolte-wpackagist/googleappslogin-enterprise",
-            "version": "3.4.3",
+            "name": "nolte-wpackagist/google-apps-login",
+            "version": "3.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/googleappslogin-enterprise/3.4.3",
-                "shasum": "76218b88d4bdd0a36a89db2a38ed5637bccb33ca"
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/google-apps-login/3.4.4",
+                "shasum": "d18d5b6bcdda475f9d6e7ab60e846170c0c735d7"
             },
             "require": {
                 "composer/installers": "^1.0"
@@ -252,10 +252,10 @@
             "type": "wordpress-plugin",
             "authors": {
                 "name": "Lever Technology LLC",
-                "homepage": "http://wp-glogin.com/"
+                "homepage": "https://wp-glogin.com/"
             },
-            "description": "Simple secure login and user management for Wordpress through your Google Apps domain (uses secure OAuth2, and MFA if enabled)",
-            "homepage": "http://wp-glogin.com/"
+            "description": "Simple secure login for Wordpress through users' Google Apps accounts (uses secure OAuth2, and MFA if enabled)",
+            "homepage": "https://wp-glogin.com/"
         },
         {
             "name": "nolte-wpackagist/gravityforms",
@@ -354,11 +354,11 @@
         },
         {
             "name": "nolte-wpackagist/shortpixel-image-optimiser",
-            "version": "4.22.4",
+            "version": "4.22.5",
             "dist": {
                 "type": "zip",
-                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/shortpixel-image-optimiser/4.22.4",
-                "shasum": "06a59f77490eba5bddcdaebb3cdfe735c7a6ed52"
+                "url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/shortpixel-image-optimiser/4.22.5",
+                "shasum": "0478b020b01099db0c8bcef1070aa9ffe085f0ff"
             },
             "require": {
                 "composer/installers": "^1.0"
