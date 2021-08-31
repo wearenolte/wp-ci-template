@@ -6,7 +6,7 @@
   "repositories": [
     {
       "type": "composer",
-			"url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress"
+			"url": "https://dev-nolte-wpackagist.pantheonsite.io/satispress/"
     },
     {
       "type": "vcs",
@@ -18,7 +18,7 @@
     "composer/installers": "^1.3.0",
     "nolte-wpackagist/acf-image-aspect-ratio-crop": "*",
     "nolte-wpackagist/advanced-custom-fields-pro": "*",
-    "nolte-wpackagist/googleappslogin-enterprise": "*",
+    "nolte-wpackagist/google-apps-login": "*",
     "nolte-wpackagist/gravityforms": "*",
     "nolte-wpackagist/lh-hsts": "*",
     "nolte-wpackagist/pantheon-advanced-page-cache": "*",
