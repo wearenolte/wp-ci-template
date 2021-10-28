@@ -10,6 +10,8 @@ services:
       - apt-get update && apt-get install --no-install-recommends yarn
     build:
       - cd /app && composer install -n
+    run_as_root:
+      - npm install --global yarn
   node:
     type: node
 tooling:
