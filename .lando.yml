@@ -15,6 +15,10 @@ services:
   node:
     type: node
 tooling:
+  node:
+    service: appserver
+  npm:
+    service: appserver
   yarn:
     service: appserver
 config:
