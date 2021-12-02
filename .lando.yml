@@ -16,6 +16,6 @@ services:
     type: node
 tooling:
   yarn:
-    service: node
+    service: appserver
 config:
   cache: false
