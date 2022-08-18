@@ -11,8 +11,6 @@ services:
       - apt-get update && apt-get install yarn
     build:
       - cd /app && composer install
-    run_as_root:
-      - npm install --global yarn
   node:
     type: node
 tooling:
