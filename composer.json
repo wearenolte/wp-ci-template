@@ -51,6 +51,12 @@
     "sort-packages": true,
     "platform": {
       "php": "7.2"
+    },
+    "allow-plugins": {
+      "composer/installers": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "rvtraveller/qs-composer-installer": true
     }
   },
   "extra": {
