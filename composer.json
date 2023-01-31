@@ -39,7 +39,8 @@
     "wpackagist-plugin/lh-hsts": ">=1.25",
     "wpackagist-plugin/stream": ">=3.9",
     "wpackagist-theme/twentytwentythree": ">=1.0",
-    "wpackagist-plugin/wp-help": "1.7.1"
+    "wpackagist-plugin/wp-help": ">=1.7.1",
+    "wpackagist-plugin/pantheon-advanced-page-cache": ">=1.2.0"
   },
   "require-dev": {
     "brain/monkey": ">=2.2.0",
