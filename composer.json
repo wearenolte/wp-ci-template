@@ -87,6 +87,12 @@
       "yarn",
       "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
     ],
+    "build-theme-assets": [
+      "cd web/wp-content/themes/lean-theme && composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
+    ],
+    "update-theme-assets": [
+      "cd web/wp-content/themes/lean-theme && composer update --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
+    ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
       "./scripts/composer/cleanup-composer"
