@@ -22,8 +22,8 @@
     }
   ],
   "require": {
-    "php": ">=8.0",
-    "composer/installers": ">=1.0",
+    "php": ">=7.4",
+    "composer/installers": "^1.9.0",
     "nolte-wpackagist/advanced-custom-fields-pro": "6.0.7",
     "nolte-wpackagist/gravityforms": "*",
     "pantheon-systems/quicksilver-pushback": ">=2",
@@ -86,12 +86,6 @@
       "@prepare-for-pantheon",
       "yarn",
       "composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
-    ],
-    "build-theme-assets": [
-      "cd web/wp-content/themes/lean-theme && composer install --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
-    ],
-    "update-theme-assets": [
-      "cd web/wp-content/themes/lean-theme && composer update --no-dev --no-ansi --no-interaction --optimize-autoloader --no-progress"
     ],
     "prepare-for-pantheon": "WordPressProject\\composer\\ScriptHandler::prepareForPantheon",
     "cleanup": [
