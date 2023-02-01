@@ -3,10 +3,13 @@ recipe: pantheon
 services:
   appserver:
     build_as_root:
+      - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+      - chmod +x wp-cli.phar
+      - mv -f wp-cli.phar /usr/local/bin/wp
       - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
       - curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | tee /usr/share/keyrings/yarnkey.gpg >/dev/null
       - echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list
-      - apt update -y
+      - apt-get update -y
       - apt-get install -y nodejs yarn
       - npm install -g npm@latest
     build:
@@ -20,6 +23,8 @@ tooling:
   npm:
     service: appserver
   yarn:
+    service: appserver
+  wp:
     service: appserver
 config:
   cache: false
